@@ -16,7 +16,7 @@ interface ApiService {
     @GET("/articles")
     suspend fun getRequest():Response<Datam>
 
-    @POST("/")
+    @POST("/run/predict")
     suspend fun createPost(@Body dataModal: Dema?): Response<Datam?>?
 
 

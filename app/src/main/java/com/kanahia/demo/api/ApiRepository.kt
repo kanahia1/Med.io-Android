@@ -1,6 +1,7 @@
 package com.kanahia.demo.api
 
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.kanahia.demo.Datam
@@ -18,9 +19,14 @@ class ApiRepository(private val ApiService : ApiService) {
     suspend fun postRequest(d : Dema){
         val result = ApiService.createPost(d)
 
+
+
         if (result?.body() != null ){
             liveData.postValue(result.body())
+        }else{
+            Log.e("PRINT",result!!.toString())
         }
+
 
     }
 
