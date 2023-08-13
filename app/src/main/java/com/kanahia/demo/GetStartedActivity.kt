@@ -1,5 +1,6 @@
 package com.kanahia.demo
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -14,7 +15,7 @@ import com.kanahia.demo.databinding.ActivityGetStartedBinding
 import com.realpacific.clickshrinkeffect.applyClickShrink
 
 class GetStartedActivity : AppCompatActivity() {
-    lateinit var mainViewModel: MainViewModel
+
     private lateinit var b : ActivityGetStartedBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,15 +28,13 @@ class GetStartedActivity : AppCompatActivity() {
 
         b.signinBtn.applyClickShrink()
 
-        val apiService = RetrofitHelper.getInstance().create(ApiService::class.java)
-        val repository = ApiRepository(apiService)
-        mainViewModel = ViewModelProvider(this,
-            MainViewModelFactory(repository)
-        ).get(MainViewModel::class.java)
 
-        mainViewModel.data.observe(this){
-            Log.e("PRINT",it.toString())
-
+        b.signinBtn.setOnClickListener {
+            val i = Intent(
+                this@GetStartedActivity,
+                SignInActivity::class.java
+            )
+            startActivity(i)
         }
     }
 }
