@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitHelper {
 
-    private const val BASE_URL ="https://segadeds-medical-diagnosis.hf.space/run/predict"
+    private const val BASE_URL ="https://segadeds-medical-diagnosis.hf.space/run/predict/"
 
     fun getInstance() : Retrofit{
         return  Retrofit.Builder()
