@@ -1,5 +1,8 @@
 
 # Med.io-Android
+
+![Desktop - 1](https://github.com/kanahia1/Med.io-Android/assets/114223204/2de004f7-1831-4731-bc5f-b2d3e231ba8b)
+
 We are Electronic Health Record Management Firm who are based on Decentralised database, wherein our core focus is on bringing in more transparency in the HealthCare Sector with the introduction of Cryptographic measures.
 There are certain points where our major focus lies:-
 1. Interoperability
