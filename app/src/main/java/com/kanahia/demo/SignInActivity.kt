@@ -2,7 +2,6 @@ package com.kanahia.demo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import com.kanahia.demo.ViewModel.MainViewModel
@@ -16,7 +15,7 @@ import com.kanahia.demo.models.Dema
 
 class SignInActivity : AppCompatActivity() {
 
-    lateinit var mainViewModel: MainViewModel
+
     lateinit var binding: ActivitySignInBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,7 +39,7 @@ class SignInActivity : AppCompatActivity() {
             binding.userText.text = binding.aiEditText.text.toString()
             var dema = Dema(array)
 
-            mainViewModel = ViewModelProvider(this,
+            var mainViewModel: MainViewModel = ViewModelProvider(this,
                 MainViewModelFactory(repository,dema)
             ).get(MainViewModel::class.java)
 

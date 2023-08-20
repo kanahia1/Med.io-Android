@@ -3,14 +3,7 @@ package com.kanahia.demo
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import androidx.lifecycle.ViewModelProvider
-import com.kanahia.demo.ViewModel.MainViewModel
-import com.kanahia.demo.ViewModel.MainViewModelFactory
-import com.kanahia.demo.api.ApiRepository
-import com.kanahia.demo.api.ApiService
-import com.kanahia.demo.api.RetrofitHelper
 import com.kanahia.demo.databinding.ActivityGetStartedBinding
 import com.realpacific.clickshrinkeffect.applyClickShrink
 
@@ -32,7 +25,7 @@ class GetStartedActivity : AppCompatActivity() {
         b.signinBtn.setOnClickListener {
             val i = Intent(
                 this@GetStartedActivity,
-                SignInActivity::class.java
+                SignOnActivity::class.java
             )
             startActivity(i)
         }
