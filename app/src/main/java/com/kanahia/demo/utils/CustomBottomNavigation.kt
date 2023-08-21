@@ -17,11 +17,12 @@ public class CustomBottomNavigation @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : View(context, attrs, defStyleAttr) {
     // val background = ColorDrawable()
-    var items = 6
-    var paddings = 5
-    private var selectedItem = 0
-    private lateinit var mSelectedImage: Drawable
-    private lateinit var mNotSelectedImage: Drawable
+    var items = 4
+    var paddings = 3
+    private var selectedItem = 1
+
+    private lateinit var mSelectedImage : Drawable
+    private lateinit var mNotSelectedImage : Drawable
     private lateinit var canvas2: Canvas
     private val drawables = arrayListOf<Int>()
 
@@ -51,14 +52,16 @@ public class CustomBottomNavigation @JvmOverloads constructor(
 
         if (canvas != null) {
             this.canvas2 = canvas
+
             for (i in 1..items){
 
                 mNotSelectedImage = context.resources.getDrawable(drawables[i-1])
-                mSelectedImage = DrawableCompat.wrap(mNotSelectedImage)
+                var m = context.resources.getDrawable(drawables[i-1])
+                mSelectedImage = DrawableCompat.wrap(m)
                 DrawableCompat.setTint(mSelectedImage, Color.parseColor("#141B31"))
 
                 if (i == 1){
-                    if(i == (selectedItem+1)){
+                    if(i == (selectedItem)){
                         mSelectedImage.setBounds(
                             Rect(
                                 bounds.left ,
@@ -72,28 +75,6 @@ public class CustomBottomNavigation @JvmOverloads constructor(
                         mNotSelectedImage.setBounds(
                             Rect(
                                 bounds.left ,
-                                bounds.top,
-                                bounds.left + width * i ,
-                                bounds.bottom
-                            )
-                        )
-                        mNotSelectedImage.draw(canvas)
-                    }
-                }else if(i == items){
-                    if(i == (selectedItem+1)){
-                        mSelectedImage.setBounds(
-                            Rect(
-                                bounds.left + width * (i-1) +paddingWidth.toInt(),
-                                bounds.top,
-                                bounds.left + width * i ,
-                                bounds.bottom
-                            )
-                        )
-                        mSelectedImage.draw(canvas)
-                    }else{
-                        mNotSelectedImage.setBounds(
-                            Rect(
-                                bounds.left + width * (i-1)+paddingWidth.toInt(),
                                 bounds.top,
                                 bounds.left + width * i ,
                                 bounds.bottom
@@ -103,7 +84,7 @@ public class CustomBottomNavigation @JvmOverloads constructor(
                     }
                 }
                 else{
-                    if(i == (selectedItem+1)){
+                    if(i == (selectedItem)){
                         mSelectedImage.setBounds(
                             Rect(
                                 bounds.left + width * (i-1) +paddingWidth.toInt(),
