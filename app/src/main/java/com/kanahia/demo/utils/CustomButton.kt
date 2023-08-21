@@ -11,6 +11,13 @@ class CustomButton(context: Context?, attrs: AttributeSet?) : LinearLayout(conte
 
     init {
         inflate(context, R.layout.custom_button, this);
+    }
+
+    fun setOnClick(function: () -> (Unit)){
+        this.setOnClickListener {
+
+            function()
+        }
 
     }
 
