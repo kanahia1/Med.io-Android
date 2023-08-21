@@ -38,6 +38,7 @@ android {
 
 
 dependencies {
+   // implementation 'com.github.volsahin:bottomify-navigation-view:1.0.2'
     implementation 'com.github.realpacific:click-shrink-effect:2.0'
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'

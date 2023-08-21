@@ -7,14 +7,20 @@
     android:orientation="vertical"
     tools:context=".Activities.HomeActivity">
 
-    <LinearLayout
+    <com.kanahia.demo.bottomify.BottomifyNavigationView
+        android:id="@+id/bottomify_nav"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal">
-        <com.kanahia.demo.utils.CustomBottomNavigation
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
+        android:layout_height="wrap_content"
+        android:background="@color/bottomifyBackgroundColor"
+        android:orientation="horizontal"
+        app:menu="@menu/navigation_items"
+        app:active_color="@color/bottomifyActiveColor"
+        app:passive_color="@color/bottomifyPassiveColor"
+        app:pressed_color="@color/bottomifyPressedColor"
+        app:item_text_size="10sp"
+        app:item_padding="4dp"
+        app:animation_duration="300"
+        app:scale_percent="5" />
+    }
 
-    </LinearLayout>
 </LinearLayout>
