@@ -1,25 +1,11 @@
-package com.kanahia.demo
+package com.kanahia.demo.Activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import android.util.Log
 import android.view.WindowManager
-import android.widget.Toast
-import androidx.lifecycle.ViewModelProvider
-import com.auth0.android.Auth0
-import com.auth0.android.authentication.AuthenticationAPIClient
-import com.auth0.android.authentication.AuthenticationException
-import com.auth0.android.callback.Callback
-import com.auth0.android.provider.WebAuthProvider
-import com.auth0.android.result.Credentials
-import com.auth0.android.result.UserProfile
-import com.kanahia.demo.ViewModel.MainViewModel
-import com.kanahia.demo.ViewModel.MainViewModelFactory
-import com.kanahia.demo.api.ApiRepository
-import com.kanahia.demo.api.ApiService
-import com.kanahia.demo.api.RetrofitHelper
+import com.kanahia.demo.R
 import com.kanahia.demo.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

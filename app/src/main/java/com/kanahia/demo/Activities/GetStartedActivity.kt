@@ -1,4 +1,4 @@
-package com.kanahia.demo
+package com.kanahia.demo.Activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

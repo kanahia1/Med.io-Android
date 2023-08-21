@@ -1,5 +1,6 @@
-package com.kanahia.demo
+package com.kanahia.demo.Activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -21,7 +22,7 @@ class SignOnActivity : AppCompatActivity() {
         binding.signInButton.applyClickShrink()
 
         binding.signInButton.setOnClick{
-            Toast.makeText(this@SignOnActivity,"Sign In",Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this@SignOnActivity,HomeActivity::class.java))
         }
     }
 }
