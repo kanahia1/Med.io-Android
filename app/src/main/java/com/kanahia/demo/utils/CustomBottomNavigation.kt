@@ -4,13 +4,11 @@ package com.kanahia.demo.utils
 import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.*
-import android.graphics.drawable.BitmapDrawable
-import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
-
 import android.view.View
-import androidx.core.content.ContextCompat
+import androidx.core.graphics.drawable.DrawableCompat
+import com.kanahia.demo.R
 
 
 public class CustomBottomNavigation @JvmOverloads constructor(
@@ -25,7 +23,14 @@ public class CustomBottomNavigation @JvmOverloads constructor(
     private lateinit var mSelectedImage: Drawable
     private lateinit var mNotSelectedImage: Drawable
     private lateinit var canvas2: Canvas
+    private val drawables = arrayListOf<Int>()
 
+    init {
+        drawables.add(0,R.drawable.home)
+        drawables.add(1,R.drawable.calendar)
+        drawables.add(2,R.drawable.chat)
+        drawables.add(3,R.drawable.profile)
+    }
 
 
     @SuppressLint("DrawAllocation")
@@ -34,8 +39,8 @@ public class CustomBottomNavigation @JvmOverloads constructor(
 
         // val selectedItemBitmap = ContextCompat.getDrawable(context,R.drawable.splash_screen_image1)?.let { drawableToBitmap(it) }
 
-        mSelectedImage = context.resources.getDrawable(R.drawable.selected_item_toolbar)
-        mNotSelectedImage = context.resources.getDrawable(R.drawable.item_nselected_toolbar)
+       // mSelectedImage = context.resources.getDrawable(R.drawable.selected_item_toolbar)
+       // mSelectedImage = context.resources.getDrawable(R.drawable.item_nselected_toolbar)
 
         val bounds: Rect = canvas!!.clipBounds
 
@@ -47,6 +52,11 @@ public class CustomBottomNavigation @JvmOverloads constructor(
         if (canvas != null) {
             this.canvas2 = canvas
             for (i in 1..items){
+
+                mNotSelectedImage = context.resources.getDrawable(drawables[i-1])
+                mSelectedImage = DrawableCompat.wrap(mNotSelectedImage)
+                DrawableCompat.setTint(mSelectedImage, Color.parseColor("#141B31"))
+
                 if (i == 1){
                     if(i == (selectedItem+1)){
                         mSelectedImage.setBounds(
