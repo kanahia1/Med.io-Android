@@ -2,5 +2,7 @@
     <string name="app_name">Demo</string>
     <string name="com_auth0_domain">kanahia.us.auth0.com</string>
     <string name="centric">A new world of <i>privacy-centric</i> health services</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

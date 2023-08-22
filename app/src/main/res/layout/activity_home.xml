@@ -9,6 +9,14 @@
     android:orientation="vertical"
     tools:context=".Activities.HomeActivity">
 
+    <androidx.fragment.app.FragmentContainerView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/fragment_container_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        />
+
     <com.kanahia.demo.bottomify.BottomifyNavigationView
         android:id="@+id/bottomify_nav"
         android:layout_width="match_parent"
@@ -23,6 +31,8 @@
         app:item_padding="4dp"
         app:animation_duration="300"
         app:scale_percent="5" />
+
+
     }
 
 </LinearLayout>
