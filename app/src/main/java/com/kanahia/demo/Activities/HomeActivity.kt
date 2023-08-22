@@ -32,14 +32,14 @@ class HomeActivity : AppCompatActivity() {
         getSupportActionBar()?.hide()
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
 
-
-
+        val bottomify = findViewById<BottomifyNavigationView>(R.id.bottomify_nav)
 
         if (savedInstanceState == null) {
             changeFragment(intialFragment)
         }
+        bottomify.setActiveNavigationIndex(intialFragment)
 
-        val bottomify = findViewById<BottomifyNavigationView>(R.id.bottomify_nav)
+
         bottomify.setOnNavigationItemChangedListener(object : OnNavigationItemChangeListener {
             override fun onNavigationItemChanged(navigationItem: BottomifyNavigationView.NavigationItem) {
                 changeFragment(navigationItem.position)

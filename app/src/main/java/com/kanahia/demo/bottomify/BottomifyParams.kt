@@ -13,7 +13,7 @@ class BottomifyParams {
     var pressedColor: String = "#141B31"
 
     var itemPadding: Float = 16f
-    var itemPaddingTB : Float = 40f
+    var itemPaddingTB : Float = 50f
     var itemTextSize : Float = 40f
     var animationDuration: Int = 300
     var endScale: Float = 0.95f
