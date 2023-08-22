@@ -7,13 +7,14 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    
+
+    <color name="bottomifyBackgroundColor">#ffffff</color>
+
+   <color name="gray70">#3D4966</color>
     <color name="blue60">#0F67FE</color>
     <color name="gray10">#F2F5F9</color>
-    <color name="gray70">#3D4966</color>
 
-    <color name="bottomifyBackgroundColor">#222327</color>
-    <color name="bottomifyPassiveColor">#AFB0B4</color>
-    <color name="bottomifyPressedColor">#2E2F33</color>
-    <color name="bottomifyActiveColor">#F9FAFE</color>
+<!--    <color name="bottomifyPassiveColor">#AFB0B4</color>-->
+<!--    <color name="bottomifyPressedColor">#2E2F33</color>-->
+<!--    <color name="bottomifyActiveColor">#F9FAFE</color>-->
 </resources>

@@ -16,7 +16,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.PopupMenu
 import android.widget.TextView
-import androidx.core.content.ContextCompat
+
 import com.kanahia.demo.R
 
 
@@ -153,7 +153,7 @@ class BottomifyNavigationView @JvmOverloads constructor(context: Context,
                 navigationItemColor = Color.parseColor(params.activeColor)
                 selectedPosition = index
             } else {
-                navigationItemColor = R.color.bottomifyPassiveColor
+                navigationItemColor = Color.parseColor(params.passiveColor)
             }
             textView.setTextColor(navigationItemColor)
             imageView.setColorFilter(navigationItemColor)
@@ -163,7 +163,8 @@ class BottomifyNavigationView @JvmOverloads constructor(context: Context,
 
             // Set navigation item's padding
             val padding = params.itemPadding.toInt()
-            navigationItemView.setPadding(padding, padding, padding, padding)
+            val paddingTB = params.itemPaddingTB.toInt()
+            navigationItemView.setPadding(padding, paddingTB, padding, paddingTB)
 
             // Add navigation item to list
             val item = NavigationItem(index, navigationItemView, textView, imageView)

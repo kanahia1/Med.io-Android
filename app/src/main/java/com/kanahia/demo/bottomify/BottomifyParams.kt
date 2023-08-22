@@ -8,11 +8,12 @@ import com.kanahia.demo.R
 class BottomifyParams {
     var menu: Menu? = null
 
-    var activeColor: String= "#F9FAFE"
-    var passiveColor: String = "#AFB0B4"
-    var pressedColor: String = "#2E2F33"
+    var activeColor: String= "#141B31"
+    var passiveColor: String = "#9EA7B8"
+    var pressedColor: String = "#141B31"
 
     var itemPadding: Float = 16f
+    var itemPaddingTB : Float = 40f
     var itemTextSize : Float = 40f
     var animationDuration: Int = 300
     var endScale: Float = 0.95f
