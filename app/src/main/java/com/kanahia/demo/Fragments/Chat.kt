@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.kanahia.demo.R
@@ -31,8 +32,10 @@ class Chat : Fragment(R.layout.fragment_chat){
 
         binding.smtBtn?.setOnClickListener {
 
+
+
             var array = arrayListOf<String>()
-            array.add("str")
+
             array.add(binding.aIEditText.text.toString())
             //binding.userText.text = binding.aiEditText.text.toString()
             var dema = Dema(array)
@@ -77,6 +80,8 @@ class Chat : Fragment(R.layout.fragment_chat){
 
 
             }
+
+            binding.aIEditText.setText("")
         }
         return binding.root
 
