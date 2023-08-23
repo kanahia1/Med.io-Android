@@ -18,6 +18,11 @@ class MainViewModel(val repository: ApiRepository,val d : Dema) : ViewModel() {
         }
 
     }
+    fun getData(){
+        viewModelScope.launch(Dispatchers.IO){
+            repository.postRequest(d)
+        }
+    }
 
     val data : LiveData<Datam>
     get() = repository.data

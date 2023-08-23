@@ -33,14 +33,12 @@ class Chat : Fragment(R.layout.fragment_chat){
 
         binding = FragmentChatBinding.inflate(inflater, container, false)
 
-
         binding.smtBtn?.setOnClickListener {
             click()
         }
 
         binding.aIEditText.setOnEditorActionListener { _, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_DONE) {
-                // Handle the submit action here
                click()
             }
             true
@@ -50,7 +48,6 @@ class Chat : Fragment(R.layout.fragment_chat){
     }
 
     private fun click(){
-
 
         hideKeyboard(binding.root)
 
@@ -73,6 +70,7 @@ class Chat : Fragment(R.layout.fragment_chat){
             this,
             MainViewModelFactory(repository, dema)
         ).get(MainViewModel::class.java)
+        mainViewModel.getData()
         //  mainViewModel.notify()
 
         mainViewModel.data.observe(viewLifecycleOwner) {
