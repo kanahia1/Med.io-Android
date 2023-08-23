@@ -1,9 +1,11 @@
 package com.kanahia.demo.Fragments
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -17,11 +19,15 @@ import com.kanahia.demo.databinding.FragmentChatBinding
 import com.kanahia.demo.models.Dema
 
 class Chat : Fragment(R.layout.fragment_chat){
+
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+
 
         val binding: FragmentChatBinding = FragmentChatBinding.inflate(inflater, container, false)
 
@@ -31,6 +37,9 @@ class Chat : Fragment(R.layout.fragment_chat){
         val repository = ApiRepository(apiService)
 
         binding.smtBtn?.setOnClickListener {
+
+            hideKeyboard(binding.root)
+
             binding.diseases!!.visibility = View.GONE
             binding.diseasesText!!.visibility = View.GONE
 
@@ -92,6 +101,12 @@ class Chat : Fragment(R.layout.fragment_chat){
         return binding.root
 
     }
+    private fun hideKeyboard(view: View) {
+        val inputMethodManager =
+            requireContext().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
+    }
+
 
 
 
