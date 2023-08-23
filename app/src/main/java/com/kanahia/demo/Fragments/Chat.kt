@@ -17,6 +17,7 @@ import com.kanahia.demo.api.ApiService
 import com.kanahia.demo.api.RetrofitHelper
 import com.kanahia.demo.databinding.FragmentChatBinding
 import com.kanahia.demo.models.Dema
+import okhttp3.internal.notify
 
 class Chat : Fragment(R.layout.fragment_chat){
 
@@ -47,6 +48,7 @@ class Chat : Fragment(R.layout.fragment_chat){
             binding.userInputC!!.visibility = View.VISIBLE
             binding.userInputTV!!.text = binding.aIEditText!!.text
 
+            binding.loadingChat!!.visibility = View.VISIBLE
 
             var array = arrayListOf<String>()
 
@@ -58,9 +60,11 @@ class Chat : Fragment(R.layout.fragment_chat){
                 this,
                 MainViewModelFactory(repository, dema)
             ).get(MainViewModel::class.java)
+          //  mainViewModel.notify()
 
             mainViewModel.data.observe(viewLifecycleOwner) {
                 var list = it.data
+                binding.loadingChat!!.visibility = View.GONE
                 binding.diseases!!.visibility = View.VISIBLE
                 binding.diseasesText!!.visibility = View.VISIBLE
 

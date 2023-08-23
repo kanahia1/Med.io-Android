@@ -74,6 +74,9 @@
                     android:backgroundTint="#DCE1E8"
                     android:padding="15dp"
                     app:cardBackgroundColor="#DCE1E8"
+                    android:elevation="0dp"
+                    app:cardElevation="0dp"
+                    app:cardMaxElevation="0dp"
                     app:cardCornerRadius="18dp"
                     app:contentPadding="8dp">
 
@@ -86,6 +89,8 @@
                         android:text="Hey mate, how can I help you with disease recognistion"
                         android:textColor="#3D4966" />
                 </androidx.cardview.widget.CardView>
+
+
 
                 <ImageView
                     android:id="@+id/userIV"
@@ -104,6 +109,9 @@
                     android:layout_marginLeft="50dp"
                     android:layout_marginTop="3dp"
                     android:layout_marginRight="25dp"
+                    android:elevation="0dp"
+                    app:cardElevation="0dp"
+                    app:cardMaxElevation="0dp"
                     android:background="#D0E4FF"
                     android:backgroundTint="#D0E4FF"
                     android:padding="15dp"
@@ -122,6 +130,46 @@
                         android:textColor="#0048CE" />
                 </androidx.cardview.widget.CardView>
 
+                <LinearLayout
+                    android:id="@+id/loading_chat"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/robot" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="50dp"
+                        android:background="#DCE1E8"
+                        android:backgroundTint="#DCE1E8"
+                        android:padding="15dp"
+                        android:elevation="0dp"
+                        app:cardElevation="0dp"
+                        app:cardMaxElevation="0dp"
+                        app:cardBackgroundColor="#DCE1E8"
+                        app:cardCornerRadius="18dp"
+                        app:contentPadding="8dp">
+
+                        <com.razzaghimahdi78.dotsloading.linear.LoadingWavy
+                            android:id="@+id/loadingWavy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:dots_color="@color/gray70"
+                            app:dots_count="3"
+                            app:dots_duration="500"
+                            app:dots_size="4dp" />
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
 
             </LinearLayout>
 
@@ -133,11 +181,11 @@
                 android:layout_marginEnd="19dp"
                 android:layout_marginBottom="5dp"
                 android:background="@color/white"
-                android:backgroundTint="@color/white"
-                android:elevation="0dp"
                 android:visibility="gone"
                 app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="14dp"
+                android:backgroundTint="@color/white"
+                android:elevation="0dp"
                 app:cardElevation="0dp"
                 app:cardMaxElevation="0dp"
                 app:contentPaddingBottom="5dp"
