@@ -13,6 +13,20 @@
    <color name="gray70">#3D4966</color>
     <color name="blue60">#0F67FE</color>
     <color name="gray10">#F2F5F9</color>
+    <color name="blue50">#458CFF</color>
+
+    <color name="sample_progress_background">#0A000000</color>
+    <color name="sample_progress_icon_background">#D32F2F</color>
+    <color name="sample_progress_primary">#EF5350</color>
+    <color name="sample_progress_secondary">#40EF5350</color>
+    <color name="sample_progress_gradient_start">#D32F2F</color>
+    <color name="sample_progress_gradient_end">#E57373</color>
+    <color name="sample_progress_text_color">#222222</color>
+
+    <array name="sample_progress_gradient">
+        <item>@color/sample_progress_gradient_start</item>
+        <item>@color/sample_progress_gradient_end</item>
+    </array>
 
 <!--    <color name="bottomifyPassiveColor">#AFB0B4</color>-->
 <!--    <color name="bottomifyPressedColor">#2E2F33</color>-->

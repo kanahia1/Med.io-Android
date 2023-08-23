@@ -10,6 +10,7 @@ import com.kanahia.demo.Fragments.Chat
 import com.kanahia.demo.Fragments.HomeFragment
 import com.kanahia.demo.Fragments.ProfileFragment
 import com.kanahia.demo.R
+
 import com.kanahia.demo.bottomify.BottomifyNavigationView
 import com.kanahia.demo.bottomify.OnNavigationItemChangeListener
 import com.kanahia.demo.databinding.ActivityHomeBinding

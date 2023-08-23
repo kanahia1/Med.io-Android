@@ -13,4 +13,9 @@
         <item name="android:statusBarColor">@color/white</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="SampleProgress">
+        <item name="android:layout_width">@dimen/content_width</item>
+        <item name="android:layout_height">30dp</item>
+    </style>
 </resources>

@@ -12,10 +12,6 @@ import retrofit2.http.POST
 
 interface ApiService {
 
-
-    @GET("/articles")
-    suspend fun getRequest():Response<Datam>
-
     @POST("/run/predict")
     suspend fun createPost(@Body dataModal: Dema?): Response<Datam?>?
 

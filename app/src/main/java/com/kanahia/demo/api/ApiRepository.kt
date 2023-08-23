@@ -19,10 +19,9 @@ class ApiRepository(private val ApiService : ApiService) {
     suspend fun postRequest(d : Dema){
         val result = ApiService.createPost(d)
 
-
-
         if (result?.body() != null ){
             liveData.postValue(result.body())
+            Log.e("PRINT",result.body().toString())
         }else{
             Log.e("PRINT",result!!.toString())
         }
