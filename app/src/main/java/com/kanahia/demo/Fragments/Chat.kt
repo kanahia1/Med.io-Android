@@ -31,7 +31,12 @@ class Chat : Fragment(R.layout.fragment_chat){
         val repository = ApiRepository(apiService)
 
         binding.smtBtn?.setOnClickListener {
+            binding.diseases!!.visibility = View.GONE
+            binding.diseasesText!!.visibility = View.GONE
 
+            binding.userIV!!.visibility = View.VISIBLE
+            binding.userInputC!!.visibility = View.VISIBLE
+            binding.userInputTV!!.text = binding.aIEditText!!.text
 
 
             var array = arrayListOf<String>()
@@ -48,6 +53,7 @@ class Chat : Fragment(R.layout.fragment_chat){
             mainViewModel.data.observe(viewLifecycleOwner) {
                 var list = it.data
                 binding.diseases!!.visibility = View.VISIBLE
+                binding.diseasesText!!.visibility = View.VISIBLE
 
                 var pro1 = String.format("%.2f", list[0].confidences[0].confidence?.times(100)).toDouble()
                 var text1 = list[0].confidences[0].label
@@ -86,6 +92,8 @@ class Chat : Fragment(R.layout.fragment_chat){
         return binding.root
 
     }
+
+
 
 }
 
